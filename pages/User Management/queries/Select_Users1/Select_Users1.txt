@@ -1,0 +1,26 @@
+SELECT
+  *
+FROM
+  Users
+	{{UserTable.searchText || statusFilter.selectedOptionValue || dateFilter2.value || ageFilter2.value || FilterLocation.value || FilterGender.selectedOptionValue ? "where": ""}}
+{{UserTable.searchText ?`
+ firstName like '%${UserTable.searchText}%' OR lastName like '%${UserTable.searchText}%' OR country like '%${UserTable.searchText}%' OR gender like '%${UserTable.searchText}%' OR status = '${UserTable.searchText}' OR email like '%${UserTable.searchText}%' or phoneNumber LIKE '%${UserTable.searchText}%'` : ""}} 
+ {{ UserTable.searchText && FilterLocation.value ? 'AND': '' }}
+ {{FilterLocation.value ? `country like '%${FilterLocation.value}%'`: '' }}
+  {{ (UserTable.searchText || FilterLocation.value) && FilterGender.selectedOptionValue ? 'AND': '' }}
+ {{FilterGender.selectedOptionValue ? `gender like '%${FilterGender.selectedOptionValue}%'`: '' }}
+ 
+ {{(UserTable.searchText || FilterLocation.value || FilterGender.selectedOptionValue) && statusFilter.selectedOptionValue ? 'AND' : ''}}
+{{statusFilter.selectedOptionValue ? `status = '${statusFilter.selectedOptionValue}'`: "" }}
+ {{dateFilter2.value ? `
+${(UserTable.searchText || FilterLocation.value || FilterGender.selectedOptionValue || statusFilter.selectedOptionValue) && dateAppFilter.value ? 'AND': ''} createdAt
+${dateAppFilter.value} '${dateFilter2.value}'`: ""}}
+{{ageFilter2.value ? `
+${(UserTable.searchText || FilterLocation.value || FilterGender.selectedOptionValue || statusFilter.selectedOptionValue || dateAppFilter.value) && ageFilter1.selectedOptionValue ? 'AND' : ''} DATE_FORMAT(FROM_DAYS(DATEDIFF(NOW(), dob)), '%Y') + 0 
+${ageFilter1.selectedOptionValue} ${ageFilter2.value}`: ""}}
+ORDER BY
+  {{UserTable.sortOrder.column || 'id'}} {{UserTable.sortOrder.order !== "asc" ? "DESC" : "ASC"}}
+LIMIT
+  {{UserTable.pageSize}}
+OFFSET
+  {{UserTable.pageOffset}}

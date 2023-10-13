@@ -1,0 +1,7 @@
+UPDATE TripActivityMasters SET
+		activityName = '{{update_form.fieldState.activityName.isVisible ? update_form.formData.activityName : update_form.sourceData.activityName}}',
+		activityDescription = '{{update_form.fieldState.activityDescription.isVisible ? update_form.formData.activityDescription : update_form.sourceData.activityDescription}}',
+    deletedAt = '{{update_form.fieldState.deletedAt.isVisible ? update_form.formData.deletedAt : update_form.sourceData.deletedAt}}',
+		createdAt = '{{update_form.fieldState.createdAt.isVisible ? update_form.formData.createdAt : update_form.sourceData.createdAt}}',
+		updatedAt = '{{update_form.fieldState.updatedAt.isVisible ? update_form.formData.updatedAt : update_form.sourceData.updatedAt}}'
+WHERE id = {{data_table.selectedRow.id}};

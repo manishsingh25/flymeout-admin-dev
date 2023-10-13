@@ -1,0 +1,1 @@
+UPDATE UserPortfolioImages SET userId= '{{Table1.updatedRow.userId}}', imageUrl= '{{Table1.updatedRow.imageUrl}}', bucketUrl= '{{Table1.updatedRow.bucketUrl}}', deletedAt= '{{Table1.updatedRow.deletedAt}}', createdAt= '{{Table1.updatedRow.createdAt}}', updatedAt= '{{Table1.updatedRow.updatedAt}}' WHERE id= '{{Table1.updatedRow.id}}';

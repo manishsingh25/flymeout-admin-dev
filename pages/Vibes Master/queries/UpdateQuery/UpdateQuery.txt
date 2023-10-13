@@ -1,0 +1,8 @@
+UPDATE Vibes SET
+		vibe = '{{update_form.fieldState.vibe.isVisible ? update_form.formData.vibe : update_form.sourceData.vibe}}',
+		icon = '{{update_form.fieldState.icon.isVisible ? update_form.formData.icon : update_form.sourceData.icon}}',
+		questionId = '{{update_form.fieldState.questionId.isVisible ? update_form.formData.questionId : update_form.sourceData.questionId}}',
+    deletedAt = '{{update_form.fieldState.deletedAt.isVisible ? update_form.formData.deletedAt : update_form.sourceData.deletedAt}}',
+		createdAt = '{{update_form.fieldState.createdAt.isVisible ? update_form.formData.createdAt : update_form.sourceData.createdAt}}',
+		updatedAt = '{{update_form.fieldState.updatedAt.isVisible ? update_form.formData.updatedAt : update_form.sourceData.updatedAt}}'
+WHERE id = {{data_table.selectedRow.id}};

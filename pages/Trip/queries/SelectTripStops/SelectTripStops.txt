@@ -1,0 +1,5 @@
+SELECT
+  stop AS label,
+  id AS value
+FROM
+  TripStops WHERE tripId={{CreateTrip.data.data.id}};

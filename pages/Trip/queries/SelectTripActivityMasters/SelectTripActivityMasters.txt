@@ -1,0 +1,5 @@
+SELECT
+  activityName AS label,
+  id AS value
+FROM
+  TripActivityMasters;

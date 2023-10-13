@@ -1,0 +1,2 @@
+DELETE FROM Notifications
+  WHERE id = {{data_table.triggeredRow.id}};

@@ -1,0 +1,1 @@
+UPDATE TripActivities SET  deletedAt= '{{Table2.updatedRow.deletedAt}}' WHERE id= '{{Table2.updatedRow.id}}';

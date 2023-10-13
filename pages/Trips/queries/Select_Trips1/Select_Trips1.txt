@@ -1,0 +1,13 @@
+SELECT
+  Trips.*, Users.firstName, Users.lastName
+FROM
+  Trips
+	INNER JOIN Users ON Trips.userId = Users.id
+WHERE
+  tripDestination LIKE '%{{Table1.searchText}}%'
+ORDER BY
+  createdAt DESC
+LIMIT
+  {{Table1.pageSize}}
+OFFSET
+  {{Table1.pageOffset}}

@@ -1,0 +1,4 @@
+INSERT INTO TripRestrictions (id, tripId, gender , greaterThanAge, lessThanAge,deletedAt, createdAt, updatedAt)
+VALUES ({{GetRestrictionFields.data[0].id}}, {{CreateTrip.data.data.id}}, '{{TripRestrictionForm.formData.gender}}', {{TripRestrictionForm.formData.greaterThanAge}}, {{TripRestrictionForm.formData.lessThanAge}}, null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+ON DUPLICATE KEY UPDATE
+    gender = '{{TripRestrictionForm.formData.gender}}', greaterThanAge = {{TripRestrictionForm.formData.greaterThanAge}}, lessThanAge = {{TripRestrictionForm.formData.lessThanAge}};

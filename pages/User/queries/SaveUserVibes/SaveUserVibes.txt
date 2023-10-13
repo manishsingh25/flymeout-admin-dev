@@ -1,0 +1,12 @@
+INSERT INTO UserVibes (id, userId, questionId, vibeId, createdAt, updatedAt)
+VALUES
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[0].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[0].id}}, {{Select1.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[1].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[1].id}}, {{Select2.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[2].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[2].id}}, {{Select3.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[3].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[3].id}}, {{Select4.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[4].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[4].id}}, {{Select5.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[5].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[5].id}}, {{Select6.value}}, CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[6].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[6].id}}, {{Select7.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ({{UserVibesQuery.data.find(val => val.questionId == getVibes.data.data[7].id)?.id || null}},{{getUser.data.data.id}}, {{getVibes.data.data[7].id}}, {{Select8.value}}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+ON DUPLICATE KEY UPDATE
+    vibeId = VALUES(vibeId);

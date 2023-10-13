@@ -1,0 +1,1 @@
+UPDATE TripActivities set stopId = {{this.params.stopId}},activityId={{this.params.activityId}} WHERE id={{this.params.id}}

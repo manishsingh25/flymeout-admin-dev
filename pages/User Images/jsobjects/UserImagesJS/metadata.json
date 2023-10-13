@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "UserImagesJS",
+    "pageId": "User Images",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "currentIndex",
+        "value": "0"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "User Images_UserImagesJS",
+  "deleted": false,
+  "gitSyncId": "64c2b64262ebff1e3f0e6c6c_64f6269abc70a224fe10f01f"
+}

@@ -1,0 +1,15 @@
+{{{
+    "phoneNumber": phoneNumber.value,
+    "firstName": firstName.value,
+    "lastName": lastName.value,
+    "dob": dob.value,
+    "city": city.value,
+    "country": country.value,
+    "instagramHandle": instagram.value,
+    "occupation": occupation.value,
+    "company": company.value,
+    "status": UserStatusSelect.value,
+    "passportStatus": Checkbox1.isChecked,
+    "gender": Gender.value,
+    "email": Email.value,
+}}}

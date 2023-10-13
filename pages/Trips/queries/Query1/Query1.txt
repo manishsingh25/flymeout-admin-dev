@@ -1,0 +1,1 @@
+DELETE from Trips where id = 35

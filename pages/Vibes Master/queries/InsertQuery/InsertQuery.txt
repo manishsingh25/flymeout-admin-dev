@@ -1,0 +1,12 @@
+INSERT INTO Vibes (
+	vibe,
+	questionId,
+	deletedAt,
+	createdAt,
+	updatedAt)
+VALUES (
+	'{{insert_form.formData.vibe}}',
+	'{{insert_form.formData.questionId}}',
+	'{{insert_form.formData.deletedAt}}',
+	'{{insert_form.formData.createdAt}}',
+	'{{insert_form.formData.updatedAt}}');

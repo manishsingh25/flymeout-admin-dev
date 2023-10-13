@@ -1,0 +1,10 @@
+INSERT INTO VibeQuestions (
+	question,
+	deletedAt,
+	createdAt,
+	updatedAt)
+VALUES (
+	'{{insert_form.formData.question}}',
+	'{{insert_form.formData.deletedAt}}',
+	'{{insert_form.formData.createdAt}}',
+	'{{insert_form.formData.updatedAt}}');

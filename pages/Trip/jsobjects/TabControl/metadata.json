@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "TabControl",
+    "pageId": "Trip",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "currentTab",
+        "value": "'0'"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Trip_TabControl",
+  "deleted": false,
+  "gitSyncId": "64c2b64262ebff1e3f0e6c6c_64ca9cd0d988253c9ff74639"
+}

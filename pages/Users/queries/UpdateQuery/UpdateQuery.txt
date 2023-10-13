@@ -1,0 +1,13 @@
+UPDATE Users SET
+		firstName = '{{update_form.fieldState.firstName.isVisible ? update_form.formData.firstName : update_form.sourceData.firstName}}',
+		lastName = '{{update_form.fieldState.lastName.isVisible ? update_form.formData.lastName : update_form.sourceData.lastName}}',
+    phoneNumber = '{{update_form.fieldState.phoneNumber.isVisible ? update_form.formData.phoneNumber : update_form.sourceData.phoneNumber}}',
+		passportStatus = '{{update_form.fieldState.passportStatus.isVisible ? update_form.formData.passportStatus : update_form.sourceData.passportStatus}}',
+		verificationCode = '{{update_form.fieldState.verificationCode.isVisible ? update_form.formData.verificationCode : update_form.sourceData.verificationCode}}',
+		verificationCodeExpiry = '{{update_form.fieldState.verificationCodeExpiry.isVisible ? update_form.formData.verificationCodeExpiry : update_form.sourceData.verificationCodeExpiry}}',
+		city = '{{update_form.fieldState.city.isVisible ? update_form.formData.city : update_form.sourceData.city}}',
+		isPhoneNumberVerified = '{{update_form.fieldState.isPhoneNumberVerified.isVisible ? update_form.formData.isPhoneNumberVerified : update_form.sourceData.isPhoneNumberVerified}}',
+		company = '{{update_form.fieldState.company.isVisible ? update_form.formData.company : update_form.sourceData.company}}',
+		country = '{{update_form.fieldState.country.isVisible ? update_form.formData.country : update_form.sourceData.country}}',
+		dob = '{{update_form.fieldState.dob.isVisible ? update_form.formData.dob : update_form.sourceData.dob}}'
+  WHERE id = {{data_table.selectedRow.id}};

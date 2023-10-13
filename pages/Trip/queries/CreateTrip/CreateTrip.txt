@@ -1,0 +1,21 @@
+{{ 
+{
+	"id": tripId.value,
+	"tripDestination": tripDestination.value,
+	"userId": SelectUser.value,
+	"tripDate": tripDate.value,
+	"existingTripmatesCount": existingTripmatesCount.value,
+	"requiredTripmatesCount": additionalTripmatesRequired.value,
+	"startDate": startDate.value,
+	"endDate": endDate.value,
+	"stayName": stayName.value,
+	"stayURL": stayURL.value,
+	"stayReceiptURL": stayReceiptURL.value,
+	"stayConfirmationCode": stayConfirmationCode.value,
+	"transportationType": transportationType.value,
+	"trasportationDepartureBooked": trasportationDepartureBooked.isChecked ,
+	"transportationDepartureTicketsURL": transportationDepartureTickets.value,
+	"trasportationArrivalBooked": trasportationArrivalBooked.isChecked,
+	"transportationArrivalTicketsURL": transportationArrivalTicket.value
+}
+}}

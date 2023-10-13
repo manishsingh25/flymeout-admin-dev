@@ -1,0 +1,20 @@
+SELECT
+  U.id,
+  U.firstName,
+	U.lastName,
+	U.instagramHandle,
+  GROUP_CONCAT(UPI.imageUrl SEPARATOR '|') AS imageUrls,
+	U.createdAt
+FROM
+  Users AS U
+LEFT JOIN
+  UserPortfolioImages AS UPI
+ON
+  U.id = UPI.userId
+WHERE UPI.imageUrl is NOT NULL
+GROUP BY
+  U.id, U.firstName, U.lastName
+LIMIT
+  {{List1.pageSize}}
+OFFSET
+  {{(List1.pageNo -1) * List1.pageSize}}

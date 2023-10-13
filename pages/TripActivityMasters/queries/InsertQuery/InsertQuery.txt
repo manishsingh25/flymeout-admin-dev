@@ -1,0 +1,12 @@
+INSERT INTO TripActivityMasters (
+	activityName,
+	activityDescription,
+	deletedAt,
+	createdAt,
+	updatedAt)
+VALUES (
+	'{{insert_form.formData.activityName}}',
+	'{{insert_form.formData.activityDescription}}',
+	'{{insert_form.formData.deletedAt}}',
+	'{{insert_form.formData.createdAt}}',
+	'{{insert_form.formData.updatedAt}}');

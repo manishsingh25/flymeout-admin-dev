@@ -1,0 +1,117 @@
+{
+  "pages": [
+    {
+      "id": "UserVibes",
+      "isDefault": false
+    },
+    {
+      "id": "Page1",
+      "isDefault": false
+    },
+    {
+      "id": "UserRatings",
+      "isDefault": false
+    },
+    {
+      "id": "TripActivityMasters",
+      "isDefault": false
+    },
+    {
+      "id": "User Images",
+      "isDefault": false
+    },
+    {
+      "id": "Trip",
+      "isDefault": false
+    },
+    {
+      "id": "Vibe Questions Master",
+      "isDefault": false
+    },
+    {
+      "id": "Notifications",
+      "isDefault": false
+    },
+    {
+      "id": "Trips",
+      "isDefault": false
+    },
+    {
+      "id": "TripRestrictions",
+      "isDefault": false
+    },
+    {
+      "id": "Vibes Master",
+      "isDefault": false
+    },
+    {
+      "id": "Users",
+      "isDefault": false
+    },
+    {
+      "id": "User Management",
+      "isDefault": true
+    },
+    {
+      "id": "User",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "clonedFromApplicationId": "652642926ea6cf15ce181d08",
+  "unpublishedApplicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "showNavbar": true,
+      "orientation": "side",
+      "navStyle": "sidebar",
+      "position": "static",
+      "itemStyle": "text",
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "showSignIn": true
+    }
+  },
+  "color": "#D6D1F2",
+  "icon": "cricket",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedCustomJSLibs": [
+    {
+      "uidString": "CryptoJS_https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/index.min.js"
+    },
+    {
+      "uidString": "Papa_https://unpkg.com/papaparse@5.3.2/papaparse.min.js"
+    },
+    {
+      "uidString": "ImageKit_https://unpkg.com/imagekit-javascript/dist/imagekit.min.js"
+    },
+    {
+      "uidString": "AWS_https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.1428.0/aws-sdk.min.js"
+    },
+    {
+      "uidString": "UUID_https://cdn.jsdelivr.net/npm/uuidjs@4.2.12/src/uuid.min.js"
+    },
+    {
+      "uidString": "protobuf_https://cdnjs.cloudflare.com/ajax/libs/protobufjs/7.2.4/protobuf.js"
+    },
+    {
+      "uidString": "mdc_https://cdn.jsdelivr.net/npm/@material/grid-list@4.0.0/dist/mdc.gridList.min.js"
+    }
+  ],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "isManualUpdate": false,
+  "deleted": false
+}

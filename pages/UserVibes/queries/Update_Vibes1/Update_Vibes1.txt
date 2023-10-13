@@ -1,0 +1,1 @@
+UPDATE Vibes SET questionId= '{{Table1.updatedRow.questionId}}', vibe= '{{Table1.updatedRow.vibe}}', deletedAt= '{{Table1.updatedRow.deletedAt}}', createdAt= '{{Table1.updatedRow.createdAt}}', updatedAt= '{{Table1.updatedRow.updatedAt}}' WHERE id= '{{Table1.updatedRow.id}}';

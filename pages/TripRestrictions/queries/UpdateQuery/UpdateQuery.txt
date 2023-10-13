@@ -1,0 +1,9 @@
+UPDATE TripRestrictions SET
+		gender = '{{update_form.fieldState.gender.isVisible ? update_form.formData.gender : update_form.sourceData.gender}}',
+		tripId = '{{update_form.fieldState.tripId.isVisible ? update_form.formData.tripId : update_form.sourceData.tripId}}',
+    greaterThanAge = '{{update_form.fieldState.greaterThanAge.isVisible ? update_form.formData.greaterThanAge : update_form.sourceData.greaterThanAge}}',
+		lessThanAge = '{{update_form.fieldState.lessThanAge.isVisible ? update_form.formData.lessThanAge : update_form.sourceData.lessThanAge}}',
+		deletedAt = '{{update_form.fieldState.deletedAt.isVisible ? update_form.formData.deletedAt : update_form.sourceData.deletedAt}}',
+		createdAt = '{{update_form.fieldState.createdAt.isVisible ? update_form.formData.createdAt : update_form.sourceData.createdAt}}',
+		updatedAt = '{{update_form.fieldState.updatedAt.isVisible ? update_form.formData.updatedAt : update_form.sourceData.updatedAt}}'
+WHERE id = {{data_table.selectedRow.id}};

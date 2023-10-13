@@ -1,0 +1,2 @@
+DELETE FROM Vibes
+  WHERE id = {{data_table.triggeredRow.id}};

@@ -1,0 +1,6 @@
+{{
+{
+	...FormControl.removeTripStatus(CreateTrip.data.data),
+	tripImages: [...S3Upload.tripImages]
+}
+}}

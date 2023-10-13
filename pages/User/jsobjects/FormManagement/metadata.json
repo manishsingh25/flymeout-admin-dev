@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "FormManagement",
+    "pageId": "User",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "editable",
+        "value": "false"
+      },
+      {
+        "name": "currentTab",
+        "value": "'Onboarding'"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "User_FormManagement",
+  "deleted": false,
+  "gitSyncId": "64c2b64262ebff1e3f0e6c6c_64dbd0890c90753f8da62354"
+}

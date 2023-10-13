@@ -1,0 +1,2 @@
+DELETE FROM VibeQuestions
+  WHERE id = {{data_table.triggeredRow.id}};

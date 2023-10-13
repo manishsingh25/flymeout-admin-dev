@@ -1,0 +1,1 @@
+SELECT id as value, vibe as label FROM Vibes where questionId = {{user_vibe_form.formData.questionId}} ;

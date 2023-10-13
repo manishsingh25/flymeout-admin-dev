@@ -1,0 +1,8 @@
+UPDATE UserVibes SET
+		userId = '{{update_form.fieldState.userId.isVisible ? update_form.formData.userId : update_form.sourceData.userId}}',
+    questionId = '{{update_form.fieldState.questionId.isVisible ? update_form.formData.questionId : update_form.sourceData.questionId}}',
+		vibeId = '{{update_form.fieldState.vibeId.isVisible ? update_form.formData.vibeId : update_form.sourceData.vibeId}}',
+		deletedAt = '{{update_form.fieldState.deletedAt.isVisible ? update_form.formData.deletedAt : update_form.sourceData.deletedAt}}',
+		createdAt = '{{update_form.fieldState.createdAt.isVisible ? update_form.formData.createdAt : update_form.sourceData.createdAt}}',
+		updatedAt = '{{update_form.fieldState.updatedAt.isVisible ? update_form.formData.updatedAt : update_form.sourceData.updatedAt}}'
+WHERE id = {{data_table.selectedRow.id}};

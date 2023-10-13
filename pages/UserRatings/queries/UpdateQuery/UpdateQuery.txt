@@ -1,0 +1,9 @@
+UPDATE UserRatings SET
+		details = '{{update_form.fieldState.details.isVisible ? update_form.formData.details : update_form.sourceData.details}}',
+		ratedBy = '{{update_form.fieldState.ratedBy.isVisible ? update_form.formData.ratedBy : update_form.sourceData.ratedBy}}',
+    userId = '{{update_form.fieldState.userId.isVisible ? update_form.formData.userId : update_form.sourceData.userId}}',
+		ratings = '{{update_form.fieldState.ratings.isVisible ? update_form.formData.ratings : update_form.sourceData.ratings}}',
+		deletedAt = '{{update_form.fieldState.deletedAt.isVisible ? update_form.formData.deletedAt : update_form.sourceData.deletedAt}}',
+		createdAt = '{{update_form.fieldState.createdAt.isVisible ? update_form.formData.createdAt : update_form.sourceData.createdAt}}',
+		updatedAt = '{{update_form.fieldState.updatedAt.isVisible ? update_form.formData.updatedAt : update_form.sourceData.updatedAt}}'
+WHERE id = {{data_table.selectedRow.id}};

@@ -1,0 +1,16 @@
+INSERT INTO UserRatings (
+	details,
+	ratedBy,
+	userId,
+	ratings,
+	deletedAt,
+	createdAt,
+	updatedAt)
+VALUES (
+	'{{insert_form.formData.details}}',
+	'{{insert_form.formData.ratedBy}}',
+	'{{insert_form.formData.userId}}',
+	'{{insert_form.formData.ratings}}',
+	'{{insert_form.formData.deletedAt}}',
+	'{{insert_form.formData.createdAt}}',
+	'{{insert_form.formData.updatedAt}}');

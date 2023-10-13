@@ -1,0 +1,1 @@
+UPDATE TripApplicants SET status= '{{Table3.updatedRow.status}}' WHERE id= '{{Table3.updatedRow.id}}';

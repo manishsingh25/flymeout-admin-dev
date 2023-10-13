@@ -1,0 +1,1 @@
+SELECT id as value, question as label FROM VibeQuestions;

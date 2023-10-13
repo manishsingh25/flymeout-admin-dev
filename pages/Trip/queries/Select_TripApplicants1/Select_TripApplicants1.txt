@@ -1,0 +1,9 @@
+SELECT TripApplicants.*, Users.firstName, Users.lastName, Users.profilePic
+FROM TripApplicants
+INNER JOIN Users ON TripApplicants.userId = Users.id WHERE tripId={{tripId.value}}
+ORDER BY
+  {{Table3.sortOrder.column || 'id'}} {{Table3.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{Table3.pageSize}}
+OFFSET
+  {{Table3.pageOffset}}

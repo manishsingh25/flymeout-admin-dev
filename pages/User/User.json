@@ -1,0 +1,113 @@
+{
+  "unpublishedPage": {
+    "name": "User",
+    "slug": "user",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1160,
+          "containerStyle": "none",
+          "snapRows": 115,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 86,
+          "minHeight": 1180,
+          "useAutoLayout": false,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "positioning": "fixed"
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "User_getUser",
+              "name": "getUser",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.userId"
+              ],
+              "timeoutInMillisecond": 100000
+            }
+          ],
+          [
+            {
+              "id": "User_getTrips",
+              "name": "getTrips",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "FilterStatus.selectedOptionValue",
+                "appsmith.URL.queryParams.userId",
+                "this.params.pageNo || TripHostedList.pageNo",
+                "this.params.pageSize || TripHostedList.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "User_UserVibesQuery",
+              "name": "UserVibesQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "getUser.data.data.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "User_GetUserRating",
+              "name": "GetUserRating",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "ReviewTab.selectedTab === 'Reviews Received' ? 'received' : 'posted'",
+                "appsmith.URL.queryParams.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "User_getTripsApplied",
+              "name": "getTripsApplied",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "FilterStatus.selectedOptionValue",
+                "appsmith.URL.queryParams.userId",
+                "this.params.pageNo || TripHostedList.pageNo",
+                "this.params.pageSize || TripHostedList.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "User",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "65290c615af740193c9b7b46_65290c615af740193c9b7b6f"
+}

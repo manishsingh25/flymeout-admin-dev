@@ -1,0 +1,26 @@
+INSERT INTO Users (
+	firstName,
+	lastName,
+	phoneNumber,
+	passportStatus,
+	verificationCode,
+	verificationCodeExpiry,
+	city,
+	isPhoneNumberVerified,
+	company,
+	country,
+	dob
+)
+VALUES (
+	'{{insert_form.formData.firstName}}',
+	'{{insert_form.formData.lastName}}',
+	'{{insert_form.formData.phoneNumber}}',
+	'{{insert_form.formData.passportStatus}}',
+	'{{insert_form.formData.verificationCode}}',
+	'{{insert_form.formData.verificationCodeExpiry}}',
+	'{{insert_form.formData.city}}',
+	'{{insert_form.formData.isPhoneNumberVerified}}',
+	'{{insert_form.formData.company}}',
+	'{{insert_form.formData.country}}',
+	'{{insert_form.formData.dob}}'
+);

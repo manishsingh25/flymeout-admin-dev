@@ -1,0 +1,104 @@
+{
+  "unpublishedPage": {
+    "name": "User Management",
+    "slug": "user-management",
+    "customSlug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1410,
+          "containerStyle": "none",
+          "snapRows": 115,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 1170,
+          "useAutoLayout": false,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "positioning": "fixed"
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "User Management_AllUsers",
+              "name": "AllUsers",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "User Management_Approved_Users",
+              "name": "Approved_Users",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "User Management_InReviewUsers",
+              "name": "InReviewUsers",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "User Management_Select_Users1",
+              "name": "Select_Users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "UserTable.sortOrder.order !== \"asc\" ? \"DESC\" : \"ASC\"",
+                "UserTable.pageOffset",
+                "(UserTable.searchText || FilterLocation.value || FilterGender.selectedOptionValue) && statusFilter.selectedOptionValue ? 'AND' : ''",
+                " (UserTable.searchText || FilterLocation.value) && FilterGender.selectedOptionValue ? 'AND': '' ",
+                "ageFilter2.value ? `\n${(UserTable.searchText || FilterLocation.value || FilterGender.selectedOptionValue || statusFilter.selectedOptionValue || dateAppFilter.value) && ageFilter1.selectedOptionValue ? 'AND' : ''} DATE_FORMAT(FROM_DAYS(DATEDIFF(NOW(), dob)), '%Y') + 0 \n${ageFilter1.selectedOptionValue} ${ageFilter2.value}`: \"\"",
+                "statusFilter.selectedOptionValue ? `status = '${statusFilter.selectedOptionValue}'`: \"\" ",
+                "FilterGender.selectedOptionValue ? `gender like '%${FilterGender.selectedOptionValue}%'`: '' ",
+                "UserTable.pageSize",
+                "UserTable.sortOrder.column || 'id'",
+                "FilterLocation.value ? `country like '%${FilterLocation.value}%'`: '' ",
+                "UserTable.searchText ?`\n firstName like '%${UserTable.searchText}%' OR lastName like '%${UserTable.searchText}%' OR country like '%${UserTable.searchText}%' OR gender like '%${UserTable.searchText}%' OR status = '${UserTable.searchText}' OR email like '%${UserTable.searchText}%' or phoneNumber LIKE '%${UserTable.searchText}%'` : \"\"",
+                "UserTable.searchText || statusFilter.selectedOptionValue || dateFilter2.value || ageFilter2.value || FilterLocation.value || FilterGender.selectedOptionValue ? \"where\": \"\"",
+                "dateFilter2.value ? `\n${(UserTable.searchText || FilterLocation.value || FilterGender.selectedOptionValue || statusFilter.selectedOptionValue) && dateAppFilter.value ? 'AND': ''} createdAt\n${dateAppFilter.value} '${dateFilter2.value}'`: \"\"",
+                " UserTable.searchText && FilterLocation.value ? 'AND': '' "
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "User Management_TotalUsers",
+              "name": "TotalUsers",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "User Management",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "65290c615af740193c9b7b46_65290c615af740193c9b7b67"
+}

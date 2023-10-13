@@ -1,0 +1,1 @@
+UPDATE Trips set deletedAt=CURRENT_TIMESTAMP where id=38;

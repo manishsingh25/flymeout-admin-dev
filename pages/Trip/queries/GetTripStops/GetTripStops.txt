@@ -1,0 +1,3 @@
+SELECT *
+FROM
+  TripStops WHERE tripId={{CreateTrip.data.data.id}};

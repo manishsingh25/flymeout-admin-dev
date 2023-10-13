@@ -1,0 +1,14 @@
+UPDATE Users SET firstName= '{{UserTable.updatedRow.firstName}}', lastName= '{{UserTable.updatedRow.lastName}}',
+phoneNumber= '{{UserTable.updatedRow.phoneNumber}}', passportStatus= {{UserTable.updatedRow.passportStatus ? 1 : 0}},
+verificationCode= '{{UserTable.updatedRow.verificationCode}}', verificationCodeExpiry=
+'{{UserTable.updatedRow.verificationCodeExpiry}}', city= '{{UserTable.updatedRow.city}}', isPhoneNumberVerified=
+{{UserTable.updatedRow.isPhoneNumberVerified ? 1 : 0}}, company= '{{UserTable.updatedRow.company}}', country=
+'{{UserTable.updatedRow.country}}', dob= '{{UserTable.updatedRow.dob}}', gender= '{{UserTable.updatedRow.gender}}',
+idURL= '{{UserTable.updatedRow.idURL}}', profilePic= '{{UserTable.updatedRow.profilePic}}', lastLoginTime=
+'{{UserTable.updatedRow.lastLoginTime}}', instagramHandle= '{{UserTable.updatedRow.instagramHandle}}', status=
+'{{UserTable.updatedRow.status}}', password= '{{UserTable.updatedRow.password}}', occupation=
+'{{UserTable.updatedRow.occupation}}', interviewCompleted= {{UserTable.updatedRow.interviewCompleted ? 1 : 0}},
+referrenceCode= '{{UserTable.updatedRow.referrenceCode}}', isLightningRoundCompleted=
+{{UserTable.updatedRow.isLightningRoundCompleted ? 1 : 0}}, vision= '{{UserTable.updatedRow.vision}}', scheduledInterview=
+'{{UserTable.updatedRow.scheduledInterview}}', email= '{{UserTable.updatedRow.email}}', bucketUrl=
+'{{UserTable.updatedRow.bucketUrl}}' WHERE id= '{{UserTable.updatedRow.id}}';

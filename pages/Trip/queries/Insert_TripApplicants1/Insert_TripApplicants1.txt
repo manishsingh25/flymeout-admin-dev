@@ -1,0 +1,1 @@
+INSERT INTO TripApplicants (tripId,userId,status,deletedAt,createdAt,updatedAt) VALUES ('{{(Table3.newRow || {}).tripId}}','{{(Table3.newRow || {}).userId}}','{{(Table3.newRow || {}).status}}','{{(Table3.newRow || {}).deletedAt}}','{{(Table3.newRow || {}).createdAt}}','{{(Table3.newRow || {}).updatedAt}}')

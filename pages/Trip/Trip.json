@@ -1,0 +1,176 @@
+{
+  "unpublishedPage": {
+    "name": "Trip",
+    "slug": "trip",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1040,
+          "containerStyle": "none",
+          "snapRows": 103,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 86,
+          "minHeight": 1050,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Trip_SelectTripActivityMasters",
+              "name": "SelectTripActivityMasters",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Trip_UserOptions",
+              "name": "UserOptions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Trip_Select_TripActivities1",
+              "name": "Select_TripActivities1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table2.pageOffset",
+                "Table2.pageSize",
+                "Table2.sortOrder.column || 'ta.id'",
+                "Table2.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"",
+                "tripId.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Trip_Select_TripApplicants1",
+              "name": "Select_TripApplicants1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table3.pageOffset",
+                "Table3.pageSize",
+                "Table3.sortOrder.column || 'id'",
+                "Table3.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"",
+                "tripId.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Trip_Total_record_TripActivities1",
+              "name": "Total_record_TripActivities1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Trip_getUsers",
+              "name": "getUsers",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Trip_CreateTrip",
+              "name": "CreateTrip",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                " \n{\n\t\"id\": tripId.value,\n\t\"tripDestination\": tripDestination.value,\n\t\"userId\": SelectUser.value,\n\t\"tripDate\": tripDate.value,\n\t\"existingTripmatesCount\": existingTripmatesCount.value,\n\t\"requiredTripmatesCount\": additionalTripmatesRequired.value,\n\t\"startDate\": startDate.value,\n\t\"endDate\": endDate.value,\n\t\"stayName\": stayName.value,\n\t\"stayURL\": stayURL.value,\n\t\"stayReceiptURL\": stayReceiptURL.value,\n\t\"stayConfirmationCode\": stayConfirmationCode.value,\n\t\"transportationType\": transportationType.value,\n\t\"trasportationDepartureBooked\": trasportationDepartureBooked.isChecked ,\n\t\"transportationDepartureTicketsURL\": transportationDepartureTickets.value,\n\t\"trasportationArrivalBooked\": trasportationArrivalBooked.isChecked,\n\t\"transportationArrivalTicketsURL\": transportationArrivalTicket.value\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Trip_GetTrip",
+              "name": "GetTrip",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "\n\n{\n\tid: tripId.value\n}\n"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Trip_Total_record_TripApplicants1",
+              "name": "Total_record_TripApplicants1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "tripId.value"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Trip_GetTripStops",
+              "name": "GetTripStops",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "CreateTrip.data.data.id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Trip_SelectTripStops",
+              "name": "SelectTripStops",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "CreateTrip.data.data.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Trip_GetRestrictionFields",
+              "name": "GetRestrictionFields",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "CreateTrip.data.data.id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Trip",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "65290c615af740193c9b7b46_65290c615af740193c9b7b55"
+}

@@ -1,0 +1,1 @@
+INSERT INTO UserPortfolioImages (userId,imageUrl,bucketUrl,deletedAt,createdAt,updatedAt) VALUES ('{{(Table1.newRow || {}).userId}}','{{(Table1.newRow || {}).imageUrl}}','{{(Table1.newRow || {}).bucketUrl}}','{{(Table1.newRow || {}).deletedAt}}','{{(Table1.newRow || {}).createdAt}}','{{(Table1.newRow || {}).updatedAt}}')

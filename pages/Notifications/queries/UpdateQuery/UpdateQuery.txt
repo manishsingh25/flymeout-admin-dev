@@ -1,0 +1,13 @@
+UPDATE Notifications SET
+		notificationIconUrl = '{{update_form.fieldState.notificationIconUrl.isVisible ? update_form.formData.notificationIconUrl : update_form.sourceData.notificationIconUrl}}',
+		notificationMasterId = '{{update_form.fieldState.notificationMasterId.isVisible ? update_form.formData.notificationMasterId : update_form.sourceData.notificationMasterId}}',
+    userId = '{{update_form.fieldState.userId.isVisible ? update_form.formData.userId : update_form.sourceData.userId}}',
+		notificationTitle = '{{update_form.fieldState.notificationTitle.isVisible ? update_form.formData.notificationTitle : update_form.sourceData.notificationTitle}}',
+		notificationBody = '{{update_form.fieldState.notificationBody.isVisible ? update_form.formData.notificationBody : update_form.sourceData.notificationBody}}',
+		emailedAt = '{{update_form.fieldState.emailedAt.isVisible ? update_form.formData.emailedAt : update_form.sourceData.emailedAt}}',
+		emailStatus = '{{update_form.fieldState.emailStatus.isVisible ? update_form.formData.emailStatus : update_form.sourceData.emailStatus}}',
+		messagedAt = '{{update_form.fieldState.messagedAt.isVisible ? update_form.formData.messagedAt : update_form.sourceData.messagedAt}}',
+		messageStatus = '{{update_form.fieldState.messageStatus.isVisible ? update_form.formData.messageStatus : update_form.sourceData.messageStatus}}',
+		notifiedAt = '{{update_form.fieldState.notifiedAt.isVisible ? update_form.formData.notifiedAt : update_form.sourceData.notifiedAt}}',
+		notificationStatus = '{{update_form.fieldState.notificationStatus.isVisible ? update_form.formData.notificationStatus : update_form.sourceData.notificationStatus}}'
+  WHERE id = {{data_table.selectedRow.id}};

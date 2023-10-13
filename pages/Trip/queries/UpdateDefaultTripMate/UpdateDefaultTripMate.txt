@@ -1,0 +1,8 @@
+{{
+{
+	...FormControl.removeTripStatus(CreateTrip.data.data),
+		defaultTripmates: [{
+			...this.params
+		}]
+}
+}}

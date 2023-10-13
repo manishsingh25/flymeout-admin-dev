@@ -1,0 +1,16 @@
+INSERT INTO TripRestrictions (
+	gender,
+	tripId,
+	greaterThanAge,
+	lessThanAge,
+	deletedAt,
+	createdAt,
+	updatedAt)
+VALUES (
+	'{{insert_form.formData.gender}}',
+	'{{insert_form.formData.tripId}}',
+	'{{insert_form.formData.greaterThanAge}}',
+	'{{insert_form.formData.lessThanAge}}',
+	'{{insert_form.formData.deletedAt}}',
+	'{{insert_form.formData.createdAt}}',
+	'{{insert_form.formData.updatedAt}}');

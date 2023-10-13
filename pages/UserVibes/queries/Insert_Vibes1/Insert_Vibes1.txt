@@ -1,0 +1,1 @@
+INSERT INTO Vibes (questionId,vibe,deletedAt,createdAt,updatedAt) VALUES ('{{(Table1.newRow || {}).questionId}}','{{(Table1.newRow || {}).vibe}}','{{(Table1.newRow || {}).deletedAt}}','{{(Table1.newRow || {}).createdAt}}','{{(Table1.newRow || {}).updatedAt}}')

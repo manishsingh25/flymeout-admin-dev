@@ -1,0 +1,12 @@
+select ta.id, ta.activityId, ts.stop, tam.activityName, ta.createdAt from TripActivities ta
+join TripActivityMasters tam
+on ta.activityId = tam.id
+left join TripStops ts
+on ts.tripId = ta.tripId
+where ta.tripId = {{tripId.value}}
+ORDER BY
+  {{Table2.sortOrder.column || 'ta.id'}} {{Table2.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{Table2.pageSize}}
+OFFSET
+  {{Table2.pageOffset}}

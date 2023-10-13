@@ -1,0 +1,1 @@
+INSERT INTO TripActivities (tripId,stopId,activityId,deletedAt,createdAt,updatedAt) VALUES ({{CreateTrip.data.data.id}},{{this.params.stopId}},{{this.params.activityId}},null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)

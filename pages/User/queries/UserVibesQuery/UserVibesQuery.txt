@@ -1,0 +1,2 @@
+SELECT * FROM UserVibes WHERE userId={{getUser.data.data.id}} LIMIT 100;
+

@@ -1,0 +1,5 @@
+{{
+{
+	reminderType: this.params.reminderType
+}
+}}

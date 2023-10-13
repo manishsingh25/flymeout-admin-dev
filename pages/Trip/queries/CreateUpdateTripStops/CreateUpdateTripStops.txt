@@ -1,0 +1,4 @@
+INSERT INTO TripStops
+(id, tripId, stop, stayIncluded, stayName, stayURL, stayReceiptURL, startDate, endDate, deletedAt, createdAt, updatedAt)
+VALUES({{TripStopsForm.formData.id}}, {{CreateTrip.data.data.id}}, '{{TripStopsForm.formData.stop}}', {{TripStopsForm.formData.stayIncluded ? 1 : 0}}, '{{TripStopsForm.formData.stayName}}', '{{TripStopsForm.formData.stayURL}}', '{{TripStopsForm.formData.stayReceiptURL}}', {{TripStopsForm.formData.startDate}}, {{TripStopsForm.formData.endDate}}, null, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON DUPLICATE KEY UPDATE 
+stop='{{TripStopsForm.formData.stop}}', stayIncluded={{TripStopsForm.formData.stayIncluded ? 1 : 0}}, stayName='{{TripStopsForm.formData.stayName}}', stayURL = '{{TripStopsForm.formData.stayURL}}', stayReceiptURL='{{TripStopsForm.formData.stayReceiptURL}}', startDate={{TripStopsForm.formData.startDate}}, endDate={{TripStopsForm.formData.endDate}}, deletedAt=null, updatedAt = CURRENT_TIMESTAMP;

@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "FormControl",
+    "pageId": "Trip",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "defautlForm",
+        "value": "{\n  \"id\": null,\n  \"tripId\": null,\n  \"stop\": \"\",\n  \"stayIncluded\": false,\n  \"stayName\": \"\",\n  \"stayURL\": \"\",\n  \"stayReceiptURL\": \"\",\n  \"startDate\": \"\",\n  \"endDate\": \"\"\n}"
+      },
+      {
+        "name": "stopform",
+        "value": "{\n  \"id\": null,\n  \"tripId\": null,\n  \"stop\": \"\",\n  \"stayIncluded\": false,\n  \"stayName\": \"\",\n  \"stayURL\": \"\",\n  \"stayReceiptURL\": \"\",\n  \"startDate\": \"\",\n  \"endDate\": \"\"\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Trip_FormControl",
+  "deleted": false,
+  "gitSyncId": "64c2b64262ebff1e3f0e6c6c_64e3cdf05765262867ee2ddc"
+}

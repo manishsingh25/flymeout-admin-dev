@@ -1,0 +1,1 @@
+Update TripImages set deletedAt=CURRENT_TIMESTAMP where id={{this.params.id}};
